@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Music Player</title>
+	<script src="https://kit.fontawesome.com/40a1059c06.js" crossorigin="anonymous"></script>
+	<style>
+
+		html{
+			color: black;
+			font-size: 62.5%;
+		}
+
+		body{
+			font-size: 7rem;
+			word-spacing: 0.5rem;
+		}
+
+		.main_div{
+			height: 100vh;
+			width: 100vw;
+			background: #f6f6f6;
+			display: grid;
+			place-items: center;
+		}
+
+		.center_div{
+			height: 55rem;
+			width: 32rem;
+			border-radius: 2rem;
+			box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+			padding: 3rem;
+			text-align: center;
+		}
+
+		@keyframes circle{
+			from{
+				transform: rotate(0deg);
+			}
+
+			to{
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes fade{
+			from{
+				opacity: 0;
+			}
+
+			to{
+				opacity: 1;
+			}
+		}
+
+
+		.music_controls{
+			display: flex;
+			justify-content: space-between;
+			margin-top: 2rem;
+		}
+
+		button{
+			background: #fff;
+			color: blue;
+			font-size: 35px;
+			width: 38%;
+			height: 95%;
+			cursor: pointer;
+		}
+	
+		#previous:hover{
+			height: 100%;
+			width: 40%;
+			color: red;
+			font-weight: 900;
+			background: #000;
+			
+		}
+
+		#next:hover{
+			height: 100%;
+			width: 40%;
+			color: white;
+			font-weight: 900;
+			background: #000;
+			display: grid;
+			place-items: center;
+			
+		}
+
+		.header{
+			font-size: 5rem;
+			color: rgb(0, 0, 200);
+			margin-bottom: 5rem;
+		}
+
+		h4{
+			color: gray;
+			font-size: 25px;
+			margin-bottom: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<div class="main_div"><div class="center_div">
+		<h2 class="header">Shape of you</h2><h4>Ed Sheeran</h4>
+			<audio src="C:\Users\Dell\Downloads\Ed Sheeran - Shape Of You [Official].mp3" id="Music"></audio>
+			<div id="anime"><img src="https://miro.medium.com/max/875/1*bqNsZ6GB2aMsZE20m8tcJw.jpeg" height="220px" width="230px" style="border-radius: 50%;"></div>
+				<div class="music_controls">
+					<button id="previous" title="Play Music">Play</button>
+					<button id="next" title="Pause Music">Pause</i>
+					</div>
+				</div>
+			</div>
+	<script>
+
+		const music = document.querySelector("audio");
+		const play = document.getElementById("previous");
+
+		
+		play.addEventListener('click', () =>{
+			music.play();
+			img.classList.add("anime");
+			
+		});
+
+		
+		next.addEventListener('click', () =>{
+			music.pause();
+			img.classList.add("anime");
+			
+		});
+
+		previous.addEventListener("click", function(){
+			anime.style.animation = "circle 3s linear infinite";
+		});
+
+		next.addEventListener("click", function(){
+			anime.style.animation = "fade 3s linear 1";
+			});
+	</script>
+</body>
+</html>
